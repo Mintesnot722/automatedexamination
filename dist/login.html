@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scene Cooker - Login</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="m-0 p-0 text-white bg-[#1e1e2f]">
+    <header class="bg-[#2a2a40] sticky top-0 h-[10vh] flex items-center">
+      <img src="../images/logo.png" alt="logo" class="h-10 pl-5" />
+    </header>
+
+    <main
+      class="flex flex-col justify-center items-center h-[85vh] text-center"
+    >
+      <h1 class="text-3xl text-[#eaeaf0] capitalize">
+        Sign in to autonomous examination
+      </h1>
+
+      <p class="pt-3 text-[#a0a3bd]">Enter your account details to continue</p>
+
+      <form id="loginForm" class="flex flex-col gap-4 mt-6">
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+          required
+          class="w-[35vw] h-10 pl-3 bg-white text-black rounded-xl outline-none"
+        />
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          required
+          class="w-[35vw] h-10 pl-3 bg-white text-black rounded-xl outline-none"
+        />
+
+        <p id="errorMsg" class="text-red-400 text-sm hidden"></p>
+
+        <div class="flex gap-6 justify-center mt-4">
+          <button
+            type="submit"
+            class="bg-[#4cc9f0] hover:bg-[#3caacb] h-12 w-24 rounded"
+          >
+            Login
+          </button>
+
+          <a href="index.html">
+            <button
+              type="button"
+              class="bg-[#2a2a40] hover:bg-[#3a3a55] h-12 w-24 rounded"
+            >
+              Back
+            </button>
+          </a>
+        </div>
+      </form>
+
+      <p class="font-light text-xs pt-8 text-[#a0a3bd]">
+        Don't have an account? Register from the welcome screen
+      </p>
+    </main>
+
+    <footer class="bg-[#1e1e2f] h-[5vh] flex justify-center items-center">
+      <p class="font-light text-xs">Autonomous Examination - © 2026</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
