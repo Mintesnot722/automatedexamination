@@ -1,5 +1,8 @@
 "use strict";
 let users = JSON.parse(localStorage.getItem("users")) || [];
+
+
+// features from register.htmll
 const registerForm = document.getElementById("registerForm");
 
 if (registerForm) {
@@ -73,7 +76,7 @@ if (!currentUser || currentUser.role !== "admin") {
   });
 }
 
-//  LOGIN
+//  features from login.html
 
 const loginForm = document.getElementById("loginForm");
 
@@ -104,7 +107,7 @@ if (loginForm) {
   });
 }
 
-//  USERNAME APPEARANCE ON DASHBOARD AND SIDEBAR 
+//  currentuser appearance on homepage and sidebar
 
 const welcome = document.getElementById("welcome");
 const role = document.getElementById("role");
@@ -121,7 +124,7 @@ if (welcome && role) {
 }
 
 
-  //  LOGOUT
+  //  logout 
 
 const logoutBtn = document.getElementById("logoutBtn");
 
