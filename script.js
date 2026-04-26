@@ -10,14 +10,14 @@ if (registerForm) {
     const password = this.password.value.trim();
     const confirmPassword = this.confirmPassword.value.trim();
 
-    // validation
+    // user validation
     if (username.length < 3) {
       alert("Username too short");
       return;
     }
 
     if (password.length < 6) {
-      alert("Password too short");
+      alert("Password is too short");
       return;
     }
 
@@ -26,7 +26,7 @@ if (registerForm) {
       return;
     }
 
-    // check exists
+    // checking if the user exists
     const exists = users.find((u) => u.username === username);
 
     if (exists) {
@@ -35,6 +35,7 @@ if (registerForm) {
     }
 
     // simple encoding (not real security)
+
     const passwordHash = btoa(password);
 
     users.push({
@@ -71,10 +72,8 @@ if (!currentUser || currentUser.role !== "admin") {
     item.style.display = "none";
   });
 }
-/* =========================
-   LOGIN
-========================= */
-("use strict");
+
+//  LOGIN
 
 const loginForm = document.getElementById("loginForm");
 
@@ -104,18 +103,20 @@ if (loginForm) {
     window.location.href = "home.html";
   });
 }
-/* =========================
-   DASHBOARD PROTECTION
-========================= */
-const welcome = document.getElementById("welcome");
 
-if (welcome) {
+//  DASHBOARD PROTECTION
+
+const welcome = document.getElementById("welcome");
+const role = document.getElementById("role");
+
+if (welcome && role) {
   const user = JSON.parse(localStorage.getItem("currentUser"));
 
   if (!user) {
     window.location.href = "login.html";
   } else {
-    welcome.textContent = `Welcome, ${user.username}`;
+    welcome.textContent = `welcome to autonomous examination, ${user.username}`;
+    role.textContent = `logged in as, ${user.username}`;
   }
 }
 
