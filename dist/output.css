@@ -200,9 +200,6 @@
   }
 }
 @layer utilities {
-  .visible {
-    visibility: visible;
-  }
   .sticky {
     position: sticky;
   }
@@ -230,26 +227,17 @@
   .ml-12 {
     margin-left: calc(var(--spacing) * 12);
   }
-  .block {
-    display: block;
-  }
   .flex {
     display: flex;
   }
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
   .h-12 {
     height: calc(var(--spacing) * 12);
-  }
-  .h-20 {
-    height: calc(var(--spacing) * 20);
   }
   .h-\[5vh\] {
     height: 5vh;
@@ -293,17 +281,11 @@
   .flex-1 {
     flex: 1;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .scale-300 {
     --tw-scale-x: 300%;
     --tw-scale-y: 300%;
     --tw-scale-z: 300%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -396,9 +378,6 @@
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
   }
-  .pt-10 {
-    padding-top: calc(var(--spacing) * 10);
-  }
   .pt-28 {
     padding-top: calc(var(--spacing) * 28);
   }
@@ -466,13 +445,6 @@
   .capitalize {
     text-transform: capitalize;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .transition-all {
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -539,11 +511,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -556,7 +523,6 @@
       --tw-scale-z: 1;
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
     }
   }
