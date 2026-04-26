@@ -104,7 +104,7 @@ if (loginForm) {
   });
 }
 
-//  DASHBOARD PROTECTION
+//  USERNAME APPEARANCE ON DASHBOARD AND SIDEBAR 
 
 const welcome = document.getElementById("welcome");
 const role = document.getElementById("role");
@@ -120,9 +120,9 @@ if (welcome && role) {
   }
 }
 
-/* =========================
-   LOGOUT
-========================= */
+
+  //  LOGOUT
+
 const logoutBtn = document.getElementById("logoutBtn");
 
 if (logoutBtn) {
